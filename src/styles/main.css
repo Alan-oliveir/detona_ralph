@@ -1,7 +1,8 @@
-.conteiner {
+.container {
     display: flex;
     flex-direction: column; 
-    height: 100vh;
+    height: 100vh; 
+    background-image: url("../images/wall.png"); 
 }
 
 .menu {
@@ -12,6 +13,7 @@
     width: 100%;
     background-color: #000000;
     color: #ffffff;
+    border-bottom: 7px solid #b49e1d;
 }
 
 .panel {
@@ -19,7 +21,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #a51515;
 }
 
 .square {
@@ -30,5 +31,12 @@
 }
 
 .enemy {
-    
+    background-image: url("../images/ralph.png");
+    background-size: cover;
+}
+
+.menu-lives {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
