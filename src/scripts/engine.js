@@ -10,7 +10,7 @@ const state = {
     gameVelocity: 1000,
     hitPosition: 0,
     result: 0,
-    currentTime: 60,
+    currentTime: 5,
   },
 
   Actions: {
@@ -26,7 +26,22 @@ function countDown() {
   if (state.values.currentTime === 0) {
     clearInterval(state.Actions.countDownTimerId);
     clearInterval(state.Actions.timerId);
-    alert("GAME OVER! Your final score is " + state.values.result);
+    Swal.fire({
+      title: "TIMEOUT!",
+      text: "Your final score is " + state.values.result,
+      icon: "info",
+      confirmButtonText: "Cool",
+      timer: 2000,
+      didOpen: () => {
+        const timer = Swal.getPopup().querySelector("b");
+        timerInterval = setInterval(() => {
+          timer.textContent = `${Swal.getTimerLeft()}`;
+        }, 100);
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      },
+    });
   }
 }
 
