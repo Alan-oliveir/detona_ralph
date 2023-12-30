@@ -6,7 +6,7 @@ Game Detona Ralph, um jogo divertido baseado no famoso filme "Detona Ralph".
 
 - [ ] Implementar áudio no game over
 - [ ] Ao terminar diminuir as vidas
-- [ ] Melhorar a forma de apresentar o alerta
+- [x] ~~Melhorar a forma de apresentar o alerta~~
 - [ ] Diminuir o tempo para mudar a casa do inimigo com um sistema de dificuldade
 
 ### In Progress
@@ -15,4 +15,4 @@ Game Detona Ralph, um jogo divertido baseado no famoso filme "Detona Ralph".
 
 ### Done ✓
 
-- [ ] None
+- [x] Melhorar a forma de apresentar o alerta
