@@ -15,6 +15,16 @@ const state = {
   },
 };
 
+function countDown() {
+  state.values.currentTime--;
+  state.view.timeLeft.textContent = state.values.currentTime;
+
+  if (state.values.currentTime === 0) {
+    clearInterval(timerId);
+    alert("GAME OVER! Your final score is " + state.values.result);
+  }
+}
+
 function randomSquare() {
   state.view.squares.forEach((square) => {
     square.classList.remove("enemy");
@@ -23,7 +33,7 @@ function randomSquare() {
   let randomPosition = state.view.squares[Math.floor(Math.random() * 9)];
   randomPosition.classList.add("enemy");
 
-  /*state.values.currentEnemy = randomPosition.id;*/
+  state.values.hitPosition = randomPosition.id;
 }
 
 function moveEnemy() {
@@ -31,14 +41,20 @@ function moveEnemy() {
 }
 
 function addListenerHitBox() {
-  state.view.squares.forEach((square) => {});
-  /*if (square.id === state.values.currentEnemy) return;
-        square.addEventListener('click', hitBox);
-    });*/
+  state.view.squares.forEach((square) => {
+    square.addEventListener("mousedown", () => {
+      if (square.id === state.values.hitPosition) {
+        state.values.result++;
+        state.view.score.textContent = state.values.result;
+        state.values.hitPosition = null;
+      }
+    });
+  });
 }
 
 function init() {
   moveEnemy();
+  addListenerHitBox();
 }
 
 init();
