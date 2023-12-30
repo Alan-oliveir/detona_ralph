@@ -42,6 +42,7 @@ function countDown() {
         clearInterval(timerInterval);
       },
     });
+    playSound("negative-beep");
   }
 }
 
