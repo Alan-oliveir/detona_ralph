@@ -10,7 +10,7 @@ const state = {
     gameVelocity: 1000,
     hitPosition: 0,
     result: 0,
-    currentTime: 5,
+    currentTime: 60,
   },
 
   Actions: {
@@ -26,6 +26,7 @@ function countDown() {
   if (state.values.currentTime === 0) {
     clearInterval(state.Actions.countDownTimerId);
     clearInterval(state.Actions.timerId);
+
     Swal.fire({
       title: "TIMEOUT!",
       text: "Your final score is " + state.values.result,
@@ -42,7 +43,8 @@ function countDown() {
         clearInterval(timerInterval);
       },
     });
-    playSound("negative-beep");
+
+    playSound("failure");
   }
 }
 
