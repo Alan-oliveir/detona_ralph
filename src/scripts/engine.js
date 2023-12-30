@@ -7,11 +7,15 @@ const state = {
   },
 
   values: {
-    timerId: null,
     gameVelocity: 1000,
     hitPosition: 0,
     result: 0,
     currentTime: 60,
+  },
+
+  Actions: {
+    timerId: setInterval(randomSquare, 1000),
+    countDownTimerId: setInterval(countDown, 1000),
   },
 };
 
@@ -20,7 +24,8 @@ function countDown() {
   state.view.timeLeft.textContent = state.values.currentTime;
 
   if (state.values.currentTime === 0) {
-    clearInterval(timerId);
+    clearInterval(state.Actions.countDownTimerId);
+    clearInterval(state.Actions.timerId);
     alert("GAME OVER! Your final score is " + state.values.result);
   }
 }
@@ -36,10 +41,6 @@ function randomSquare() {
   state.values.hitPosition = randomPosition.id;
 }
 
-function moveEnemy() {
-  state.values.timerId = setInterval(randomSquare, state.values.gameVelocity);
-}
-
 function addListenerHitBox() {
   state.view.squares.forEach((square) => {
     square.addEventListener("mousedown", () => {
@@ -53,7 +54,6 @@ function addListenerHitBox() {
 }
 
 function init() {
-  moveEnemy();
   addListenerHitBox();
 }
 
