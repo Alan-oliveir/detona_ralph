@@ -24,7 +24,8 @@ Bem-vindo ao **JSGame Detona Ralph** - Um jogo divertido baseado no famoso filme
 4. Divirta-se explorando e coletando moedas, mas fique atento aos inimigos!
 
 ___
-**Créditos:** acesse [aqui](https://github.com/Alan-oliveir/detona_ralph/blob/main/CREDITS.md)
+**Créditos:**   
+Acesse [aqui](https://github.com/Alan-oliveir/detona_ralph/blob/main/CREDITS.md)
 
 **Contato:**  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alan-ogoncalves)
