@@ -1,5 +1,9 @@
 # Awesome JSGame Detona Ralph
 
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
 Bem-vindo ao **JSGame Detona Ralph** - Um jogo divertido baseado no famoso filme "Detona Ralph", desenvolvido utilizando Javascript.
 
 ### Tecnologias Utilizadas
@@ -19,11 +23,8 @@ Bem-vindo ao **JSGame Detona Ralph** - Um jogo divertido baseado no famoso filme
 3. Use as setas direcionais para mover o personagem e a barra de espaço para interagir.
 4. Divirta-se explorando e coletando moedas, mas fique atento aos inimigos!
 
-### Créditos
+___
+**Créditos:** acesse [aqui](https://github.com/Alan-oliveir/detona_ralph/blob/main/CREDITS.md)
 
-Este jogo foi desenvolvido como parte de um projeto educacional da Digital Innovation One.
-
----
-
-Divirta-se jogando o **JSGame Detona Ralph**  
-Confira o repositório original [aqui](https://github.com/digitalinnovationone/jsgame-detona-ralph)
+**Contato:**  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alan-ogoncalves)
