@@ -1,6 +1,6 @@
-# detona_ralph## Awesome JSGame Detona Ralph
+# Awesome JSGame Detona Ralph
 
-Bem-vindo ao **JSGame Detona Ralph** um jogo divertido baseado no famoso filme "Detona Ralph", desenvolvido utilizando Javascript.
+Bem-vindo ao **JSGame Detona Ralph** - Um jogo divertido baseado no famoso filme "Detona Ralph", desenvolvido utilizando Javascript.
 
 ### Tecnologias Utilizadas
 
