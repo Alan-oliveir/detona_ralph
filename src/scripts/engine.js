@@ -12,7 +12,7 @@ const state = {
     hitPosition: 0,
     result: 0,
     resultRegister: [],
-    currentTime: 5,
+    currentTime: 60,
     lives: 3,
   },
 
