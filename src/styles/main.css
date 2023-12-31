@@ -40,6 +40,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    letter-spacing: .2rem;
 }
 
 .menu-time h2:nth-child(2)

@@ -4,13 +4,16 @@ const state = {
     enemy: document.querySelector(".enemy"),
     timeLeft: document.querySelector("#time-left"),
     score: document.querySelector("#score"),
+    lives: document.querySelector("#lives"),
   },
 
   values: {
     gameVelocity: 1000,
     hitPosition: 0,
     result: 0,
-    currentTime: 60,
+    resultRegister: [],
+    currentTime: 5,
+    lives: 3,
   },
 
   Actions: {
@@ -18,6 +21,62 @@ const state = {
     countDownTimerId: setInterval(countDown, 1000),
   },
 };
+
+function playSound(audioName) {
+  let audio = new Audio(`./src/audios/${audioName}.m4a`);
+  audio.volume = 0.2;
+  audio.play();
+}
+
+function resetGame() {
+  clearInterval(state.Actions.timerId);
+  clearInterval(state.Actions.countDownTimerId);
+
+  // Reinicialize o estado
+  state.values.hitPosition = 0;
+  state.values.result = 0;
+  state.values.currentTime = 5;
+
+  // Atualize as visualizações
+  state.view.timeLeft.textContent = state.values.currentTime;
+  state.view.score.textContent = state.values.result;
+  state.view.lives.textContent = state.values.lives;
+
+  // Reinicie os timers
+  state.Actions.timerId = setInterval(randomSquare, 1000);
+  state.Actions.countDownTimerId = setInterval(countDown, 1000);
+}
+
+function livesCounter() {
+  state.values.lives--;
+  state.view.lives.textContent = state.values.lives;
+  state.values.resultRegister.push(state.values.result);
+
+  if (state.values.lives > 0) {
+    resetGame();
+  } else {
+    Swal.fire({
+      title: "GAME OVER!",
+      text:
+        "Your best score is " +
+        Math.max.apply(null, state.values.resultRegister),
+      icon: "info",
+      confirmButtonText: "OK",
+      timer: 3000,
+      didOpen: () => {
+        const timer = Swal.getPopup().querySelector("b");
+        timerInterval = setInterval(() => {
+          timer.textContent = `${Swal.getTimerLeft()}`;
+        }, 100);
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      },
+    });
+
+    playSound("beep");
+  }
+}
 
 function countDown() {
   state.values.currentTime--;
@@ -45,13 +104,8 @@ function countDown() {
     });
 
     playSound("failure");
+    livesCounter();
   }
-}
-
-function playSound(audioName) {
-  let audio = new Audio(`./src/audios/${audioName}.m4a`);
-  audio.volume = 0.2;
-  audio.play();
 }
 
 function randomSquare() {
