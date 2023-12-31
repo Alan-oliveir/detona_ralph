@@ -35,7 +35,7 @@ function resetGame() {
   // Reinicialize o estado
   state.values.hitPosition = 0;
   state.values.result = 0;
-  state.values.currentTime = 5;
+  state.values.currentTime = 60;
 
   // Atualize as visualizações
   state.view.timeLeft.textContent = state.values.currentTime;
