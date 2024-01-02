@@ -63,7 +63,7 @@ function livesCounter() {
       icon: "question",
       showDenyButton: true,
       confirmButtonText: "RESTART",
-      denyButtonText: "CANCEL",
+      denyButtonText: "EXIT",
     }).then((result) => {
       if (result.isConfirmed) {
         window.location.reload();
