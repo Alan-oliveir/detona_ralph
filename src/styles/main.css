@@ -1,49 +1,48 @@
 .container {
-    display: flex;
-    flex-direction: column; 
-    height: 100vh; 
-    background-image: url("../images/wall.png"); 
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("../images/wall.png");
 }
 
 .menu {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 90px;
-    width: 100%;
-    background-color: #000000;
-    color: #ffffff;
-    border-bottom: 0.5rem solid #b49e1d;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  border-bottom: 0.5rem solid #b49e1d;
 }
 
 .panel {
-    margin-top: 1rem;
-    height: 100vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-top: 1rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .square {
-    height: 150px;
-    width: 150px;
-    border: 1px solid #131212;
-    background-color: #5ba8c7;
+  height: 150px;
+  width: 150px;
+  border: 1px solid #131212;
+  background-color: #5ba8c7;
 }
 
 .enemy {
-    background-image: url("../images/ralph.png");
-    background-size: cover;
+  background-image: url("../images/ralph.png");
+  background-size: cover;
 }
 
 .menu-lives {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: .2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.2rem;
 }
 
-.menu-time h2:nth-child(2)
-.menu-score h2:nth-child(2) {
-    margin-top: 1rem;
+.menu-time h2:nth-child(2) .menu-score h2:nth-child(2) {
+  margin-top: 1rem;
 }
