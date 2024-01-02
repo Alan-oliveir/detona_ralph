@@ -60,18 +60,16 @@ function livesCounter() {
       text:
         "Your best score is " +
         Math.max.apply(null, state.values.resultRegister),
-      icon: "info",
-      confirmButtonText: "OK",
-      timer: 3000,
-      didOpen: () => {
-        const timer = Swal.getPopup().querySelector("b");
-        timerInterval = setInterval(() => {
-          timer.textContent = `${Swal.getTimerLeft()}`;
-        }, 100);
-      },
-      willClose: () => {
-        clearInterval(timerInterval);
-      },
+      icon: "question",
+      showDenyButton: true,
+      confirmButtonText: "RESTART",
+      denyButtonText: "CANCEL",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.reload();
+      } else if (result.isDenied) {
+        window.close();
+      }
     });
 
     playSound("beep");
@@ -90,8 +88,8 @@ function countDown() {
       title: "TIMEOUT!",
       text: "Your final score is " + state.values.result,
       icon: "info",
-      confirmButtonText: "Cool",
-      timer: 2000,
+      showConfirmButton: false,
+      timer: 1200,
       didOpen: () => {
         const timer = Swal.getPopup().querySelector("b");
         timerInterval = setInterval(() => {
