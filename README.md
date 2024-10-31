@@ -18,6 +18,10 @@ Bem-vindo ao **JSGame Detona Ralph** - Um jogo divertido baseado no famoso filme
 ![screenshot](https://github.com/Alan-oliveir/detona_ralph/blob/main/screenshots/screenshot.png)
 
 
+### Deploy
+O jogo está disponível em:
+https://alan-oliveir.github.io/detona_ralph/
+
 ### Como Jogar
 1. Clone este repositório para sua máquina local.
 2. Abra o arquivo `index.html` em seu navegador web.
