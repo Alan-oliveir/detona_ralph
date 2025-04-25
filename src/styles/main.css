@@ -46,3 +46,21 @@
 .menu-time h2:nth-child(2) .menu-score h2:nth-child(2) {
   margin-top: 1rem;
 }
+
+.difficulty-display {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid #ff6347;
+  text-shadow: 2px 2px 2px #000;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
