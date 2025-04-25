@@ -58,7 +58,7 @@ function increaseDifficulty() {
   }, 500);
 
   // Reproduzir som de aumento de nível
-  playSound("hit");
+  playSound("level-up");
 }
 
 function playSound(audioName) {
@@ -162,7 +162,7 @@ function init() {
   // Cria o indicador de nível
   state.view.difficultyDisplay = document.createElement("div");
   state.view.difficultyDisplay.classList.add("difficulty-display");
-  state.view.difficultyDisplay.innerHTML = `Nível: <span>${difficultyLevel}</span>`;
+  state.view.difficultyDisplay.innerHTML = `Level: <span>${difficultyLevel}</span>`;
   state.view.difficultyDisplay.style.position = "absolute";
   state.view.difficultyDisplay.style.top = "90px";
   state.view.difficultyDisplay.style.right = "20px";

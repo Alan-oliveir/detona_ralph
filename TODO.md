@@ -1,20 +1,32 @@
-# Detona Ralph
+# Detona Ralph - Melhorias Implementadas
 
-Game Detona Ralph, um jogo divertido baseado no famoso filme "Detona Ralph".
+Este documento lista as melhorias e recursos adicionais que foram implementados no projeto original do jogo Detona Ralph.
 
-### Todo
+## Recursos Adicionados
 
-- [x] ~~Implementar áudio no game over~~
-- [x] ~~Ao terminar diminuir as vidas~~
-- [x] ~~Melhorar a forma de apresentar o alerta~~
-- [ ] Diminuir o tempo para mudar a casa do inimigo com um sistema de dificuldade
+### Sistema de Vidas
+- Implementado um sistema de três vidas que permite ao jogador continuar jogando após o tempo acabar
+- Adicionado contador visual de vidas restantes na interface
 
-### In Progress
+### Sistema de Dificuldade Progressiva
+- Adicionado sistema que aumenta gradualmente a dificuldade do jogo
+- O personagem Ralph muda de posição cada vez mais rápido conforme o tempo passa
+- Implementado indicador visual do nível atual de dificuldade
+- A velocidade aumenta a cada 10 segundos até atingir um limite máximo
 
-- [ ] None
+### Melhorias na Interface
+- Melhorado o sistema de alertas usando a biblioteca SweetAlert
+- Adicionado botões para reiniciar ou sair do jogo após Game Over
+- Implementado registro do melhor score entre as tentativas
 
-### Done ✓
+### Efeitos Sonoros
+- Adicionados sons para acertos, falhas e fim de jogo
+- Implementado sistema de volume controlado para melhor experiência
 
-- [x] Melhorar a forma de apresentar o alerta
-- [x] Implementar áudio no game over
-- [x] Ao terminar diminuir as vidas
+## Status das Implementações
+
+### Concluído ✓
+- [x] Melhorar a forma de apresentar o alerta usando SweetAlert
+- [x] Implementar áudio no game over e durante o jogo
+- [x] Sistema de vidas: ao terminar o tempo, diminuir uma vida e continuar
+- [x] Sistema de dificuldade progressiva que diminui o tempo para mudar a casa do inimigo
